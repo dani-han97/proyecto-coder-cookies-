@@ -1,0 +1,263 @@
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+header{
+   position: sticky;
+   top: 0%;
+    background-color:#FDEBD0 ; 
+    z-index: 1000;  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+height: 10vh;   }
+
+.titulonav{
+    width: 25%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+justify-content: space-between;
+
+}
+.titulologo{
+    font-size: 18px;
+    font-family: cursive;
+color: #FF0000;
+}
+nav{ 
+    width: 75%;
+    display:flex ;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+a{
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    font-family:'Times New Roman', Times, serif ;
+    font-weight: 600;
+}
+.logotipo-cookie{
+    width: 80px;
+}
+
+main{
+    font-weight: 400;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+}
+.tituloclas{ 
+width: 100%; background-color: #a83d3d38;
+}
+.sobrenosotros{
+   background-color: dimgray ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.presentacioncookie{
+    width: 35%;
+    border-radius: 0%;
+    padding: 20px;
+}
+.pregeneral{
+    width: 60%;
+    text-align: left;
+    font-size: 18px;
+    color: white;
+    padding: 15%;
+}
+
+.madre{ font-size: 28px; margin-bottom: 10px;}
+.bienvenidos{ font-style: oblique; font-size: 24px; margin-bottom: 20px;}
+.puno{ margin-bottom: 15px; font-weight: lighter;}
+h1{
+    color:#FF0000;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif; 
+
+}
+p{
+    font-weight: bold;
+    font-size: 16px;
+}
+.fondomenu{ 
+    display: flex;
+    flex-direction: column;
+}
+footer{
+    background-color:#FDEBD0;
+    color: black;
+    font-size: 16px;
+    display: grid;
+    grid-template-areas:
+    "gracias gracias gracias"
+    "textocorreo sucursales suscribete"
+    "correo listasuc textosus"
+    "redes listasuc formulario";
+    grid-template-columns: 30% 30% 30%;  
+    grid-template-rows:60px 100px 80px;
+
+}
+.socialmedia{ width: 35px;}
+.gracias{grid-area:gracias; text-align: center; color: #FF0000;}
+.eslogan{ grid-area:textocorreo; color: gray; font-size: 24px;}
+.correo{ grid-area:correo;} 
+.correo:hover{ color: #FF0000;}
+.sucursales{ grid-area:sucursales; text-align: center; font-size: 24px;}
+.listasuc{grid-area:listasuc; text-align:center; list-style: none;} 
+.suscri{grid-area:suscribete; text-align:center; font-size: 24px;}
+.texsuscri{ grid-area:textosus; text-align:center;} 
+.redes{ grid-area: redes; display: flex; flex-direction: row; justify-content: space-between;}
+.suscripcion{grid-area:formulario; text-align:center; background-color: #c94f4f; color: white; border: none; padding: 8px 15px;cursor: pointer; border-radius: 5px;}
+.suscripcion button:hover{ background-color: #a83d3d;}
+    
+
+.suscripcion input{ 
+    flex: 1;
+    padding: 12px;
+    border: none;
+    background-color: #a80f2f;
+    color: white;
+}
+h4{
+    text-decoration: underline;
+    text-align: center;
+    color: #FF0000;
+}
+.secionespeciales{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.contactoone{
+    background-image:url(../carpeta-img/fondo-contacto.png.png);
+height: 250px;
+}
+.contact{
+    color: floralwhite;
+    font-size: 46px;
+}
+.escribinos{
+    color: #FF0000;
+    font-size: 38px;
+    text-align: center;
+
+}
+.parrafouno{
+    color: black;
+    font-size: 28px;
+}
+.formulario input,
+.formulario textarea{
+    width: 100%;
+    padding: 18px;
+    border: 1px solid #e5e5e5;
+    font-size: 18 px;
+    border-radius: 4px;
+    outline: none;
+    transition: o.3s;
+    background: #fafafa;
+}
+.formulario textarea{
+ min-height: 180px;
+ resize: none;
+}
+.formulario div { 
+    display: flex;
+    flex-direction: column;
+}
+.enviar{
+    padding: 18px;
+    border: none;
+    background: #d4143a46;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+.enviar:hover{
+    background: #a80f2f;
+}
+
+ 
+.formulario{
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px;
+    padding: 30px;
+
+    display: grid;
+    grid-template-areas: 
+    "nombre apellido correo telefono"
+    "mensaje mensaje mensaje mensaje"
+    "enviar enviar enviar enviar"
+    ;
+    grid-template-columns:  25% 25% 25% 25%;
+    grid-template-rows: 100px 100px 60px  ;
+}
+
+.nombre{
+    grid-area:nombre;
+}
+.apellido{
+    grid-area:apellido;
+}
+.correo{ grid-area:correo;}
+.telefono{ grid-area:telefono ;}
+.mensaje{ grid-area:mensaje;}
+.enviar{ grid-area:enviar;}
+
+@media (max-width:480px){
+    header{ flex-direction: column;
+    justify-content: center;
+align-items: center;
+position: sticky;
+height: 110px; gap: 5px;}
+.titulologo{display: none;}
+nav{width: 95%; background-color: #a83d3d38;
+justify-content:space-around;}
+a{ font-weight: 500;}
+.logotipo-cookie{ width: 50px;}
+.sobrenosotros{ flex-direction: column;
+}
+.presentacioncookie{width: 90%; }
+.pregeneral{ width: 90%; padding: 5%;}
+footer{
+    grid-template-areas: 
+    "gracias"
+    "textocorreo"
+    "suscribete"
+    "formulario"
+    "redes" ;
+    grid-template-columns:auto; 
+}
+.correo{display: none;}
+.sucursales{ display: none;}
+.listasuc{ display: none;}
+.texsuscri{display: none;}
+.eslogan{ font-size: 20px;}
+.secionespeciales{ 
+    flex-direction: column;
+    justify-content: center;
+}
+.contactoone{
+     background-image: url(../carpeta-img/fondomibile.jpg);
+    background-repeat: repeat-x;
+} 
+.redes{justify-content: flex-end;}
+    
+}
+    
