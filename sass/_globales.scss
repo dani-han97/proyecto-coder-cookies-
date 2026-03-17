@@ -1,0 +1,37 @@
+
+@use "variables" as *;
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+
+    main {
+        font-weight: 400;
+
+        text-align: left;
+
+        h1 {
+            color: $rojo;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        h4 {
+            text-decoration: underline;
+            text-align: center;
+            color: $rojo;
+        }
+
+    
+
+    p {
+        font-weight: bold;
+        font-size: 16px;
+
+    } 
+  }
+}

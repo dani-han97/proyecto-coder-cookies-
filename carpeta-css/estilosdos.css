@@ -1,0 +1,409 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+}
+body main {
+  font-weight: 400;
+  text-align: left;
+}
+body main h1 {
+  color: #FF0000;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
+body main h4 {
+  text-decoration: underline;
+  text-align: center;
+  color: #FF0000;
+}
+body main p {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+header {
+  position: sticky;
+  top: 0%;
+  background-color: #FDEBD0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 10vh;
+}
+header .titulonav {
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+header .titulologo {
+  font-size: 18px;
+  font-family: cursive;
+  color: #FF0000;
+}
+header .logotipo-cookie {
+  width: 80px;
+}
+header nav {
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+header nav ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    height: 110px;
+    gap: 5px;
+  }
+  header nav {
+    width: 95%;
+    background-color: rgba(168, 61, 61, 0.2196078431);
+    justify-content: space-around;
+  }
+  header nav a {
+    font-weight: 500;
+  }
+  header .logotipo-cookie {
+    width: 50px;
+  }
+  header .titulologo {
+    display: none;
+  }
+}
+main .contactoone contac {
+  color: floralwhite;
+  font-size: 46px;
+  -webkit-animation: tracking-in-expand 2s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  animation: tracking-in-expand 2s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+main .sobrenosotros {
+  background-color: dimgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .sobrenosotros .pregeneral {
+  width: 60%;
+  text-align: left;
+  font-size: 18px;
+  color: white;
+  padding: 15%;
+}
+main .sobrenosotros .pregeneral .madre {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+main .sobrenosotros .pregeneral .bienvenidos {
+  font-style: oblique;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+main .sobrenosotros .pregeneral .puno {
+  margin-bottom: 15px;
+  font-weight: lighter;
+}
+main .sobrenosotros .presentacioncookie {
+  width: 35%;
+  border-radius: 0%;
+  padding: 20px;
+}
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  main .contactoone {
+    background-image: url(../carpeta-img/fondomibile.jpg);
+    background-repeat: repeat-x;
+  }
+  main .sobrenosotros {
+    flex-direction: column;
+  }
+  main .sobrenosotros .pregeneral {
+    width: 95%;
+    padding: 5%;
+  }
+  main .sobrenosotros .presentacioncookie {
+    width: 90%;
+  }
+}
+main .contactoone {
+  background-image: url(../carpeta-img/fondo-contacto.png.png);
+  height: 250px;
+}
+main .contactoone .contact {
+  color: floralwhite;
+  font-size: 46px;
+  -webkit-animation: tracking-in-expand 2s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  animation: tracking-in-expand 2s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+main .escribinos {
+  color: #FF0000;
+  font-size: 38px;
+  text-align: center;
+}
+main .escribinos .parrafouno {
+  color: black;
+  font-size: 28px;
+}
+main .formulario {
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px;
+  padding: 30px;
+  display: grid;
+  grid-template-areas: "nombre apellido correo telefono" "mensaje mensaje mensaje mensaje" "enviar enviar enviar enviar";
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 100px 100px 60px;
+  gap: 20px;
+}
+main .formulario input,
+main .formulario textarea {
+  width: 100%;
+  padding: 18px;
+  border: 1px solid #e5e5e5;
+  font-size: 18 px;
+  border-radius: 4px;
+  outline: none;
+  transition: all 0.3s;
+  background: #fafafa;
+}
+main .formulario textarea {
+  min-height: 180px;
+  resize: none;
+}
+main .formulario .nombre {
+  grid-area: nombre;
+}
+main .formulario .apellido {
+  grid-area: apellido;
+}
+main .formulario .correo {
+  grid-area: correo;
+}
+main .formulario .telefono {
+  grid-area: telefono;
+}
+main .formulario .mensaje {
+  grid-area: mensaje;
+}
+main .formulario .enviar {
+  grid-area: enviar;
+  padding: 18px;
+  border: none;
+  background: rgba(168, 61, 61, 0.2196078431);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+main .formulario .enviar:hover {
+  background-color: #a80f2f;
+}
+main .formulario .formulario div {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 480px) {
+  main .contactoone {
+    background-image: url(../carpeta-img/fondomibile.jpg);
+    background-repeat: repeat-x;
+  }
+  main .formulario {
+    display: flex;
+    flex-direction: column;
+  }
+  main .formulario div {
+    width: 90%;
+  }
+}
+main .tituloclas {
+  width: 100%;
+  background-color: rgba(168, 61, 61, 0.2196078431);
+}
+
+footer {
+  background-color: #FDEBD0;
+  color: black;
+  font-size: 16px;
+  display: grid;
+  grid-template-areas: "gracias gracias gracias" "textocorreo sucursales suscribete" "correo listasuc textosus" "redes listasuc formulario";
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: 60px 100px 80px;
+}
+footer .socialmedia {
+  width: 35px;
+}
+footer .gracias {
+  grid-area: gracias;
+  text-align: center;
+  color: #FF0000;
+}
+footer .eslogan {
+  grid-area: textocorreo;
+  color: gray;
+  font-size: 24px;
+}
+footer .correo {
+  grid-area: correo;
+}
+footer .correo hover {
+  color: red;
+}
+footer .sucursales {
+  grid-area: sucursales;
+  text-align: center;
+  font-size: 24px;
+}
+footer .listasuc {
+  grid-area: listasuc;
+  text-align: center;
+  list-style: none;
+}
+footer .suscri {
+  grid-area: suscribete;
+  text-align: center;
+  font-size: 24px;
+  -webkit-animation: vibrate-1 0.3s linear infinite both;
+  animation: vibrate-1 0.3s linear infinite both;
+}
+@keyframes vibrate-1 {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+  25% {
+    -webkit-transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
+  }
+  50% {
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+  }
+  75% {
+    -webkit-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+footer .texsuscri {
+  grid-area: textosus;
+  text-align: center;
+}
+footer .redes {
+  grid-area: redes;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+footer .suscripcion {
+  grid-area: formulario;
+  text-align: center;
+  background-color: #c94f4f;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+footer .suscripcion input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  background-color: #a80f2f;
+  color: white;
+}
+footer .suscripcion button:hover {
+  background-color: #a83d3d;
+}
+
+@media (max-width: 480px) {
+  footer {
+    grid-template-areas: "gracias" "textocorreo" "suscribete" "formulario" "redes";
+    grid-template-columns: auto;
+  }
+  footer .correo {
+    display: none;
+  }
+  footer .sucursales {
+    display: none;
+  }
+  footer .listasuc {
+    display: none;
+  }
+  footer .texsuscri {
+    display: none;
+  }
+  footer .eslogan {
+    font-size: 20px;
+  }
+  footer .redes {
+    justify-content: flex-end;
+  }
+}
+
+/*# sourceMappingURL=estilosdos.css.map */

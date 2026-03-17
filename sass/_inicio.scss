@@ -1,0 +1,88 @@
+@use "variables" as *;
+main{
+    .contactoone{
+        contac{
+color: floralwhite;
+    font-size: 46px;
+
+    -webkit-animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+        }
+      }
+    .sobrenosotros{
+         background-color: dimgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .pregeneral{
+         width: 60%;
+    text-align: left;
+    font-size: 18px;
+    color:$blanco;
+    padding: 15%;
+    .madre{ 
+        font-size: 28px;
+    margin-bottom: 10px;
+    }
+    .bienvenidos{
+        font-style: oblique;
+    font-size: 24px;
+    margin-bottom: 20px;
+    }
+    .puno{ margin-bottom: 15px;
+    font-weight: lighter;
+    } }
+    .presentacioncookie {
+    width: 35%;
+    border-radius: 0%;
+    padding: 20px;
+}
+    
+    }
+    @-webkit-keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+}
+@media (max-width:480px){
+    main{
+       .contactoone {
+        background-image: url(../carpeta-img/fondomibile.jpg);
+        background-repeat: repeat-x;
+    } 
+    .sobrenosotros {
+        flex-direction: column;
+        .pregeneral {
+        width: 95%;
+        padding: 5%;
+    }
+    .presentacioncookie {
+        width: 90%;
+    }
+    } }
+}

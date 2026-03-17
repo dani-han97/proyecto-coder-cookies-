@@ -1,0 +1,117 @@
+
+@use "variables" as *;
+
+    main{
+.contactoone{
+        background-image: url(../carpeta-img/fondo-contacto.png.png);
+    height: 250px;
+    .contact{
+      color: floralwhite;
+    font-size: 46px;  
+     -webkit-animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    } }
+      
+    @-webkit-keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+} 
+
+
+    .escribinos{
+color: $rojo ;
+    font-size: 38px;
+    text-align: center;
+
+        .parrafouno{
+          color: $negro;
+    font-size: 28px;
+}  }
+        
+  .formulario{
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px;
+    padding: 30px;
+
+     display: grid;
+
+    grid-template-areas:
+        "nombre apellido correo telefono"
+        "mensaje mensaje mensaje mensaje"
+        "enviar enviar enviar enviar";
+         grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 100px 100px 60px;
+    gap: 20px;
+
+    input, 
+    textarea {
+        width: 100%;
+    padding: 18px;
+    border: 1px solid #e5e5e5;
+    font-size: 18 px;
+    border-radius: 4px;
+    outline: none;
+    transition: all 0.3s;
+    background: #fafafa;
+    }
+    textarea{
+         min-height: 180px;
+    resize: none;
+}
+
+.nombre { grid-area: nombre; }
+
+.apellido { grid-area: apellido;}
+
+.correo {  grid-area: correo; }
+
+.telefono { grid-area: telefono; }
+
+.mensaje { grid-area: mensaje; }
+.enviar {
+    grid-area: enviar;
+    padding: 18px;
+    border: none;
+    background:$bordo;
+    color: $blanco;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.enviar:hover {
+    background-color: #a80f2f;
+}
+.formulario div{
+    display: flex;
+    flex-direction: column;
+}
+
+    } }
+
+     @media (max-width:480px) {
+        main{
+            .contactoone {
+        background-image: url(../carpeta-img/fondomibile.jpg);
+        background-repeat: repeat-x;
+    }
+    .formulario{
+    display: flex;
+    flex-direction: column;}
+    .formulario div { 
+        width: 90%;
+        }
+     } }
+        
+

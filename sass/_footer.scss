@@ -1,0 +1,146 @@
+@use "variables" as *;
+footer{
+    background-color:#FDEBD0;
+    color:black;
+    font-size: 16px;
+    display: grid;
+    grid-template-areas:
+        "gracias gracias gracias"
+        "textocorreo sucursales suscribete"
+        "correo listasuc textosus"
+        "redes listasuc formulario";
+
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 60px 100px 80px;
+.socialmedia {
+    width: 35px;
+}
+
+.gracias {
+    grid-area: gracias;
+    text-align: center;
+    color: $rojo;
+}
+
+.eslogan {
+    grid-area: textocorreo;
+    color: gray;
+    font-size: 24px;
+}
+
+.correo {
+    grid-area: correo;
+    hover{ 
+        color: red;
+    }
+}
+
+
+.sucursales {
+    grid-area: sucursales;
+    text-align: center;
+    font-size: 24px;
+}
+
+.listasuc {
+    grid-area: listasuc;
+    text-align: center;
+    list-style: none;
+}
+.suscri {
+    grid-area: suscribete;
+    text-align: center;
+    font-size: 24px;
+    -webkit-animation: vibrate-1 0.3s linear infinite both;
+    animation: vibrate-1 0.3s linear infinite both;
+}
+
+@keyframes vibrate-1 {
+    0% {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+
+    25% {
+        -webkit-transform: translate(-2px, 2px);
+        transform: translate(-2px, 2px);
+    }
+
+    50% {
+        -webkit-transform: translate(-2px, -2px);
+        transform: translate(-2px, -2px);
+    }
+
+    75% {
+        -webkit-transform: translate(2px, 2px);
+        transform: translate(2px, 2px);
+    }
+
+    100% {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    } }
+.texsuscri {
+    grid-area: textosus;
+    text-align: center;
+}
+
+.redes {
+    grid-area: redes;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.suscripcion {
+    grid-area: formulario;
+    text-align: center;
+    background-color: #c94f4f;
+    color: $blanco;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    input{
+        flex: 1;
+    padding: 12px;
+    border: none;
+    background-color: $rojoozcuro;
+    color: $blanco;
+}
+button:hover{
+ background-color: #a83d3d;
+}
+}}
+@media (max-width:480px) {
+footer {
+        grid-template-areas:
+            "gracias"
+            "textocorreo"
+            "suscribete"
+            "formulario"
+            "redes";
+        grid-template-columns: auto;
+         .correo {
+        display: none;
+    }
+
+    .sucursales {
+        display: none;
+    }
+
+    .listasuc {
+        display: none;
+    }
+
+    .texsuscri {
+        display: none;
+    }
+
+    .eslogan {
+        font-size: 20px;
+    }
+     .redes {
+        justify-content: flex-end;
+    }
+    }
+}
