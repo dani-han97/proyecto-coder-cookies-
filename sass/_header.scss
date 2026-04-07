@@ -1,38 +1,35 @@
 @use "variables" as *;
-header {
+header { font-family: "Dynapuff", cursive;
+    font-size: 20px;
     position: sticky;
     top: 0%;
     background-color:$beige;
     z-index: 1000;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    height: 10vh;
+    @include flex-basico(flex, row, space-around);
+    height: 15vh;
 
     .titulonav {
+    @include flex-basico(flex, row, space-around);
         width: 25%;
-        display: flex;
-        flex-direction: row;
         flex-wrap: nowrap;
         align-items: center;
-        justify-content: space-between;
     }
 
     .titulologo {
-        font-size: 18px;
+        font-size: 22px;
         font-family: cursive;
         color: $rojo;
+        font-weight: 800;
     }
     .logotipo-cookie {
         width: 80px;
     }
 
     nav {
+        @include flex-basico(flex, row, space-around);
         width: 75%;
-        display: flex;
-        flex-direction: row;
         align-items: center;
-        justify-content: space-around;
+        
 
         ul {
             list-style: none;
@@ -40,19 +37,20 @@ header {
             gap: 20px;
 
             li {
+            
                 a {
                     text-decoration: none;
                     font-size: 18px;
                     color: $negro;
-                    font-family: 'Times New Roman', Times, serif;
-                    font-weight: 600
+                    font-weight: 600;
                 }
+                
             }
         }
     }
 }
-@media (max-width:480px) {
-    header {
+@media (max-width:768px) {
+    header { 
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -74,3 +72,19 @@ header {
     .titulologo {
         display: none;
         } } }
+   @media (min-width: 769px) and (max-width: 1024px) {
+    header{
+        .titulonav{ 
+            width: 35%;
+            background-color:#a83d3d38; 
+        }
+        .titulologo{
+            font-size: 20px;
+        }
+        nav{
+            width: 65%;
+            justify-content: flex-end;
+            padding: 5%;
+        }
+    }
+   }    

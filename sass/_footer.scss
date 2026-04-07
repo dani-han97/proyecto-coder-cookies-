@@ -1,5 +1,6 @@
 @use "variables" as *;
-footer{
+
+footer{ 
     background-color:#FDEBD0;
     color:black;
     font-size: 16px;
@@ -29,8 +30,12 @@ footer{
 }
 
 .correo {
+    font-size: 20px;
+    color: $negro;
+    font-style: oblique;
+    text-decoration:none;
     grid-area: correo;
-    hover{ 
+    .correo:hover{ 
         color: red;
     }
 }
@@ -97,12 +102,10 @@ footer{
     background-color: #c94f4f;
     color: $blanco;
     border: none;
-    padding: 8px 15px;
-    cursor: pointer;
-    border-radius: 5px;
+    padding: 8px 8px;
     input{
         flex: 1;
-    padding: 12px;
+    padding: 6px;
     border: none;
     background-color: $rojoozcuro;
     color: $blanco;
@@ -111,7 +114,7 @@ button:hover{
  background-color: #a83d3d;
 }
 }}
-@media (max-width:480px) {
+@media (max-width:768px) {
 footer {
         grid-template-areas:
             "gracias"
@@ -142,5 +145,22 @@ footer {
      .redes {
         justify-content: flex-end;
     }
-    }
-}
+    .eslogan{text-align: center; }
+    } }
+    @media (min-width: 769px) and (max-width: 1024px) {
+       footer {
+        
+        grid-template-areas:
+        "gracias gracias"
+        "textocorreo sucursales"
+        "correo listasuc"
+        "textosus formulario"
+       "redes redes";
+       grid-template-columns: 45% 45%;
+       grid-template-rows: auto;
+       .gracias{font-size: 18px;}
+       .eslogan{ font-size: 18px;}
+       .suscri { display: none;}
+       .sucursales { font-size: 20px;}
+       
+} }

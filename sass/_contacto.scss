@@ -98,9 +98,11 @@ color: $rojo ;
     flex-direction: column;
 }
 
-    } }
+    } 
+ 
+}
 
-     @media (max-width:480px) {
+     @media (max-width:768px) {
         main{
             .contactoone {
         background-image: url(../carpeta-img/fondomibile.jpg);
@@ -114,4 +116,19 @@ color: $rojo ;
         }
      } }
         
+   @media (min-width: 769px) and (max-width: 1024px) {
+    main{ 
+        
+        .formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+
+    .formulario div { 
+        width: 70%;
+        margin: 0 auto;
+        }
+        
+    }
+   }
 

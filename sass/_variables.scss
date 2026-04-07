@@ -5,3 +5,13 @@ $gris: dimgray;
 $blanco: white;
 $beige: #FDEBD0;
 $rojoozcuro: #a80f2f;
+ 
+@mixin flex-basico ($disposicion, $dirrecion, $justi){
+    display:$disposicion;
+    flex-direction:$dirrecion;
+    justify-content:$justi;
+}
+@mixin letra(  $tamano, $color){
+    font-size: $tamano;
+    color: $color;
+}

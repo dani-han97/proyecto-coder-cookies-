@@ -5,16 +5,15 @@
 }
 
 body {
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Dynapuff", cursive;
+  font-weight: 600;
 }
 body main {
-  font-weight: 400;
   text-align: left;
 }
 body main h1 {
   color: #FF0000;
   text-align: center;
-  font-family: "Times New Roman", Times, serif;
 }
 body main h4 {
   text-decoration: underline;
@@ -27,6 +26,8 @@ body main p {
 }
 
 header {
+  font-family: "Dynapuff", cursive;
+  font-size: 20px;
   position: sticky;
   top: 0%;
   background-color: #FDEBD0;
@@ -34,30 +35,31 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  height: 10vh;
+  height: 15vh;
 }
 header .titulonav {
-  width: 25%;
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  width: 25%;
   flex-wrap: nowrap;
   align-items: center;
-  justify-content: space-between;
 }
 header .titulologo {
-  font-size: 18px;
+  font-size: 22px;
   font-family: cursive;
   color: #FF0000;
+  font-weight: 800;
 }
 header .logotipo-cookie {
   width: 80px;
 }
 header nav {
-  width: 75%;
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-around;
+  width: 75%;
+  align-items: center;
 }
 header nav ul {
   list-style: none;
@@ -68,11 +70,10 @@ header nav ul li a {
   text-decoration: none;
   font-size: 18px;
   color: black;
-  font-family: "Times New Roman", Times, serif;
   font-weight: 600;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   header {
     flex-direction: column;
     justify-content: center;
@@ -96,7 +97,21 @@ header nav ul li a {
     display: none;
   }
 }
-main .contactoone contac {
+@media (min-width: 769px) and (max-width: 1024px) {
+  header .titulonav {
+    width: 35%;
+    background-color: rgba(168, 61, 61, 0.2196078431);
+  }
+  header .titulologo {
+    font-size: 20px;
+  }
+  header nav {
+    width: 65%;
+    justify-content: flex-end;
+    padding: 5%;
+  }
+}
+main .contactoone .contact {
   color: floralwhite;
   font-size: 46px;
   -webkit-animation: tracking-in-expand 2s cubic-bezier(0.215, 0.61, 0.355, 1) both;
@@ -127,6 +142,11 @@ main .sobrenosotros .pregeneral .bienvenidos {
 main .sobrenosotros .pregeneral .puno {
   margin-bottom: 15px;
   font-weight: lighter;
+  font-size: 20px;
+  line-height: 1, 5;
+}
+main .sobrenosotros .pregeneral .pfinal {
+  font-size: 26px;
 }
 main .sobrenosotros .presentacioncookie {
   width: 35%;
@@ -158,7 +178,7 @@ main .sobrenosotros .presentacioncookie {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   main .contactoone {
     background-image: url(../carpeta-img/fondomibile.jpg);
     background-repeat: repeat-x;
@@ -167,11 +187,28 @@ main .sobrenosotros .presentacioncookie {
     flex-direction: column;
   }
   main .sobrenosotros .pregeneral {
-    width: 95%;
+    width: 100%;
     padding: 5%;
   }
   main .sobrenosotros .presentacioncookie {
     width: 90%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  main .sobrenosotros {
+    width: 100%;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+  }
+  main .sobrenosotros .pregeneral {
+    width: 95%;
+    text-align: center;
+    font-size: 20px;
+    padding: 5%;
+  }
+  main .sobrenosotros .pregeneral .puno {
+    font-size: 18px;
   }
 }
 main .contactoone {
@@ -265,7 +302,7 @@ main .formulario .formulario div {
   flex-direction: column;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   main .contactoone {
     background-image: url(../carpeta-img/fondomibile.jpg);
     background-repeat: repeat-x;
@@ -276,6 +313,17 @@ main .formulario .formulario div {
   }
   main .formulario div {
     width: 90%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  main .formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  main .formulario div {
+    width: 70%;
+    margin: 0 auto;
   }
 }
 main .tituloclas {
@@ -306,9 +354,13 @@ footer .eslogan {
   font-size: 24px;
 }
 footer .correo {
+  font-size: 20px;
+  color: black;
+  font-style: oblique;
+  text-decoration: none;
   grid-area: correo;
 }
-footer .correo hover {
+footer .correo .correo:hover {
   color: red;
 }
 footer .sucursales {
@@ -366,13 +418,11 @@ footer .suscripcion {
   background-color: #c94f4f;
   color: white;
   border: none;
-  padding: 8px 15px;
-  cursor: pointer;
-  border-radius: 5px;
+  padding: 8px 8px;
 }
 footer .suscripcion input {
   flex: 1;
-  padding: 12px;
+  padding: 6px;
   border: none;
   background-color: #a80f2f;
   color: white;
@@ -381,7 +431,7 @@ footer .suscripcion button:hover {
   background-color: #a83d3d;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   footer {
     grid-template-areas: "gracias" "textocorreo" "suscribete" "formulario" "redes";
     grid-template-columns: auto;
@@ -403,6 +453,28 @@ footer .suscripcion button:hover {
   }
   footer .redes {
     justify-content: flex-end;
+  }
+  footer .eslogan {
+    text-align: center;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  footer {
+    grid-template-areas: "gracias gracias" "textocorreo sucursales" "correo listasuc" "textosus formulario" "redes redes";
+    grid-template-columns: 45% 45%;
+    grid-template-rows: auto;
+  }
+  footer .gracias {
+    font-size: 18px;
+  }
+  footer .eslogan {
+    font-size: 18px;
+  }
+  footer .suscri {
+    display: none;
+  }
+  footer .sucursales {
+    font-size: 20px;
   }
 }
 
